@@ -27,7 +27,7 @@ $array = [
 echo Arr::get($array, 'key'); // > value
 echo Arr::get($array, 'array.key'); // > value
 
-var_dump(Arr::get($array, 'array));
+var_dump(Arr::get($array, 'array'));
 // > [
 // >    'key' => 'value',
 // >    'entryarray' => [
