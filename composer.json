@@ -1,0 +1,42 @@
+{
+    "name": "whatis/support-arr",
+    "version": "1.0.0",
+    "description": "Класс-помощник для работы с массивами",
+    "type": "library",
+    "keywords": [
+        "whatis",
+        "php",
+        "library",
+        "support",
+        "arr",
+        "array"
+    ],
+    "require": { "php": "^8.2" },
+    "license": "unlicense",
+    "autoload": {
+        "psr-4": {
+            "Whatis\\Support\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Whatis",
+            "email": "anton-gogo@mail.ru",
+            "homepage": "https://github.com/TheWhatis",
+            "role": "Developer"
+        }
+    ],
+    "scripts": {
+        "phpdoc-html": [
+            "phpdoc -d src -t docs/html"
+        ],
+        "phpdoc-markdown": [
+            "phpdoc -d src -t docs/markdown --template=vendor/saggre/phpdocumentor-markdown/themes/markdown"
+        ],
+        "phpdoc": [ "@phpdoc-html", "@phpdoc-markdown" ]
+    },
+    "require-dev": {
+        "php": "^8.2",
+        "saggre/phpdocumentor-markdown": "^0.1.3"
+    }
+}
