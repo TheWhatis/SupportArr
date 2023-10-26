@@ -9,7 +9,7 @@
 
 PHP version 8
 
-* Full name: `\Whatis\Settings\Support\Arr`
+* Full name: `\Whatis\Support\Arr`
 
 **See Also:**
 
@@ -120,7 +120,7 @@ public static undot(array $array): array
 ```
 
 Разворачивает dotted массив
-(см. метод {@see \Whatis\Settings\Support\Arr::dot()})
+(см. метод {@see \Whatis\Support\Arr::dot()})
 
 * This method is **static**.
 

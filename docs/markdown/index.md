@@ -11,13 +11,13 @@ This is an automatically generated documentation for **Documentation**.
 ## Namespaces
 
 
-### \Whatis\Settings\Support
+### \Whatis\Support
 
 #### Classes
 
 | Class | Description |
 |-------|-------------|
-| [`Arr`](./classes/Whatis/Settings/Support/Arr.md) | Вспомогательный класс массивов|
+| [`Arr`](./classes/Whatis/Support/Arr.md) | Вспомогательный класс массивов|
 
 
 
