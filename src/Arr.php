@@ -13,7 +13,7 @@
  * @link     https://github.com/TheWhatis/Settings
  */
 
-namespace Whatis\Settings\Support;
+namespace Whatis\Support;
 
 use ArrayAccess;
 
