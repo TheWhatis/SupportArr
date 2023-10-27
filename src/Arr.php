@@ -129,6 +129,44 @@ class Arr
     }
 
     /**
+     * Создать dotted массив
+     *
+     * Преобразовывает dotted массив
+     * как метод {@see Arr::dot()},
+     * только оставляет промежуточные
+     * ключи и значения
+     *
+     * @param iterable $iterable Итерируемый объект
+     * @param string   $prefix   Профикс (необходим
+     *                           для генерации)
+     *
+     * @return array
+     */
+    public static function extDot(
+        iterable $iterable,
+        string $prefix = ''
+    ): array {
+        $result = [];
+        foreach($iterable as $key => $value) {
+            // Добавляем значение в массив
+            $result[$prefix . $key] = $value;
+
+            // Если массив то перебираем
+            // внутренние элементы с
+            // помощью static::extDot
+            if(static::accessible($value)) {
+                $result = array_merge(
+                    $result, static::extDot(
+                        $value, $prefix . $key . '.'
+                    )
+                );
+            }
+        }
+
+        return $result;
+    }
+    
+    /**
      * Развернуть dotted массив
      *
      * Разворачивает dotted массив

@@ -26,6 +26,11 @@ Search.appendIndex(
             "summary": "\u0421\u043E\u0437\u0434\u0430\u0442\u044C\u0020dotted\u0020\u043C\u0430\u0441\u0441\u0438\u0432",
             "url": "classes/Whatis-Support-Arr.html#method_dot"
         },                {
+            "fqsen": "\\Whatis\\Support\\Arr\u003A\u003AextDot\u0028\u0029",
+            "name": "extDot",
+            "summary": "\u0421\u043E\u0437\u0434\u0430\u0442\u044C\u0020dotted\u0020\u043C\u0430\u0441\u0441\u0438\u0432",
+            "url": "classes/Whatis-Support-Arr.html#method_extDot"
+        },                {
             "fqsen": "\\Whatis\\Support\\Arr\u003A\u003Aundot\u0028\u0029",
             "name": "undot",
             "summary": "\u0420\u0430\u0437\u0432\u0435\u0440\u043D\u0443\u0442\u044C\u0020dotted\u0020\u043C\u0430\u0441\u0441\u0438\u0432",

@@ -138,6 +138,36 @@ public static dot(iterable $iterable, string $prefix = &#039;&#039;): array
 
 ***
 
+### extDot
+
+Создать dotted массив
+
+```php
+public static extDot(iterable $iterable, string $prefix = &#039;&#039;): array
+```
+
+Преобразовывает dotted массив
+как метод {@see \Whatis\Support\Arr::dot()},
+только оставляет промежуточные
+ключи и значения
+
+* This method is **static**.
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$iterable` | **iterable** | Итерируемый объект |
+| `$prefix` | **string** | Профикс (необходим<br />для генерации) |
+
+
+
+
+***
+
 ### undot
 
 Развернуть dotted массив
