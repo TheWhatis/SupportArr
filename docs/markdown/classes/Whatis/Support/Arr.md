@@ -17,6 +17,25 @@ PHP version 8
 
 
 
+## Properties
+
+
+### wildcards
+
+Шаблоны и постановочные
+знаки для них
+
+```php
+public static array $wildcards
+```
+
+Необходимо для метода
+{@see \Whatis\Support\Arr::getWithWildcards()}
+
+* This property is **static**.
+
+
+***
 
 ## Methods
 
@@ -249,6 +268,40 @@ public static get(array|\ArrayAccess $array, string|int $key, mixed $default = n
 | `$array` | **array&#124;\ArrayAccess** | Массив |
 | `$key` | **string&#124;int** | Ключ |
 | `$default` | **mixed** | Значение по-умолчанию |
+
+
+
+
+***
+
+### getWithWildcards
+
+Получить значения из массива
+с использованием подстановочных
+знаков
+
+```php
+public static getWithWildcards(array $array, string|int $key): array
+```
+
+Позволяет использовать такого
+рода пути до ключей:
+`path.to.*.key`, `path.to.*` ...
+
+Также можно экранировать
+шаблоны: `path.to.\*.key`
+
+* This method is **static**.
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$array` | **array** | Массив |
+| `$key` | **string&#124;int** | Ключ |
 
 
 

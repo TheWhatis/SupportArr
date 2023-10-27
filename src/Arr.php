@@ -34,6 +34,21 @@ use ArrayAccess;
 class Arr
 {
     /**
+     * Шаблоны и постановочные
+     * знаки для них
+     *
+     * Необходимо для метода
+     * {@see Arr::getWithWildcards()}
+     *
+     * @var array
+     */
+    public static array $wildcards = [
+        '*' => '[^.]+',
+        '[int]' => '\d+',
+        '[string]' => '[a-zA-Z]+'
+    ];
+
+    /**
      * Проверка что значение сопоставляемое массиву
      *
      * @param mixed $value Значение
@@ -165,7 +180,7 @@ class Arr
 
         return $result;
     }
-    
+
     /**
      * Развернуть dotted массив
      *
@@ -260,5 +275,51 @@ class Arr
 
         // Возвращаем значение
         return $array;
+    }
+
+    /**
+     * Получить значения из массива
+     * с использованием подстановочных
+     * знаков
+     *
+     * Позволяет использовать такого
+     * рода пути до ключей:
+     * `path.to.*.key`, `path.to.*` ...
+     *
+     * Также можно экранировать
+     * шаблоны: `path.to.\*.key`
+     *
+     * @param array      $array   Массив
+     * @param string|int $key     Ключ
+     *
+     * @return array
+     */
+    public static function getWithWildcards(
+        array $array,
+        string|int $key
+    ): array {
+        // Генерируем выражение, которое ищет
+        // совпадения шаблонов и заменяет их
+        // на постановочные знаки (выражения)
+        // которые имеют значения в preg_match.
+        //
+        // В том числе исключаем экранированные
+        // шаблоны: * - true, \* - false
+        $pattern = '/^' . str_replace('.', '\.', $key) . '$/';
+        foreach (static::$wildcards as $template => $wildcard) {
+            $pattern = str_replace(
+                '\\' . $wildcard, preg_quote($template), str_replace(
+                    $template, $wildcard, $pattern
+                )
+            );
+        }
+
+        // Фильтруем по ключу
+        return array_filter(
+            static::extDot($array),
+            function ($key) use ($pattern) {
+                return preg_match($pattern, $key);
+            }, ARRAY_FILTER_USE_KEY
+        );
     }
 }
