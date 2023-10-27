@@ -13,7 +13,7 @@ PHP version 8
 
 **See Also:**
 
-* https://github.com/TheWhatis/Settings - 
+* https://github.com/TheWhatis/SupportArr - 
 
 
 
