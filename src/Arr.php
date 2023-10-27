@@ -305,19 +305,29 @@ class Arr
         //
         // В том числе исключаем экранированные
         // шаблоны: * - true, \* - false
-        $pattern = '/^' . str_replace('.', '\.', $key) . '$/';
-        foreach (static::$wildcards as $template => $wildcard) {
-            $pattern = str_replace(
-                '\\' . $wildcard, preg_quote($template), str_replace(
-                    $template, $wildcard, $pattern
-                )
-            );
-        }
+
+        // Разделяем ключи
+        $pattern = explode('.', $key);
+
+        // Заменяем шаблоны на
+        // постановочные знаки
+        $pattern = array_map(
+            static function ($key) {
+                return static::$wildcards[$key] ?? preg_quote($key);
+            }, $pattern
+        );
+
+        // Соеденяем в dotted путь
+        // с экранированием
+        $pattern  = implode('\.', $pattern);
+
+        // Создаем шаблон
+        $pattern = '/^' . $pattern . '$/';
 
         // Фильтруем по ключу
         return array_filter(
             static::extDot($array),
-            function ($key) use ($pattern) {
+            static function ($key) use ($pattern) {
                 return preg_match($pattern, $key);
             }, ARRAY_FILTER_USE_KEY
         );
