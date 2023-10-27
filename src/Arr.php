@@ -7,10 +7,10 @@
  * PHP version 8
  *
  * @category Support
- * @package  Settings
+ * @package  SupportArr
  * @author   Whatis <anton-gogo@mail.ru>
  * @license  unlicense
- * @link     https://github.com/TheWhatis/Settings
+ * @link     https://github.com/TheWhatis/SupportArr
  */
 
 namespace Whatis\Support;
@@ -26,10 +26,10 @@ use ArrayAccess;
  * PHP version 8
  *
  * @category Support
- * @package  Settings
+ * @package  SupportArr
  * @author   Whatis <anton-gogo@mail.ru>
  * @license  unlicense
- * @link     https://github.com/TheWhatis/Settings
+ * @link     https://github.com/TheWhatis/SupportArr
  */
 class Arr
 {
