@@ -1,6 +1,6 @@
 {
     "name": "whatis/support-arr",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "Класс-помощник для работы с массивами",
     "type": "library",
     "keywords": [
