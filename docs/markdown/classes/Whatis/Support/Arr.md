@@ -79,7 +79,7 @@ public static exists(string|int $key, array|\ArrayAccess $array): bool
 Создать dotted массив
 
 ```php
-public static dot(iterable $array, string $prefix = &#039;&#039;): array
+public static dot(iterable $iterable, string $prefix = &#039;&#039;): array
 ```
 
 Преобразовывает массив в
@@ -103,7 +103,7 @@ public static dot(iterable $array, string $prefix = &#039;&#039;): array
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$array` | **iterable** | Итерируемый объект |
+| `$iterable` | **iterable** | Итерируемый объект |
 | `$prefix` | **string** | Профикс (необходим<br />для генерации) |
 
 
@@ -200,4 +200,4 @@ public static get(array|\ArrayAccess $array, string|int $key, mixed $default = n
 
 
 ***
-> Automatically generated from source code comments on 2023-10-26 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-10-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

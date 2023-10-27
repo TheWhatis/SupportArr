@@ -79,18 +79,18 @@ class Arr
      * вложенность переданного
      * массива, пример: `path.to.key`
      *
-     * @param iterable $array  Итерируемый объект
-     * @param string   $prefix Профикс (необходим
-     *                         для генерации)
+     * @param iterable $iterable Итерируемый объект
+     * @param string   $prefix   Профикс (необходим
+     *                           для генерации)
      *
      * @return array
      */
     public static function dot(
-        iterable $array,
+        iterable $iterable,
         string $prefix = ''
     ): array {
         $result = [];
-        foreach($array as $key => $value) {
+        foreach($iterable as $key => $value) {
             // Если массив то перебираем
             // внутренние элементы с
             // помощью static::dot
@@ -184,7 +184,7 @@ class Arr
         string|int $key,
         mixed $default = null
     ): mixed {
-        // Если передан внутренний ключ
+        // Если есть вложенность
         if (strpos($key, '.') === false) {
             // Если ключ в массиве есть, то
             // возвращаем его, иначе значение
