@@ -45,7 +45,7 @@ class Arr
     public static array $wildcards = [
         '*' => '[^.]+',
         '[int]' => '\d+',
-        '[string]' => '[a-zA-Z]+'
+        '[string]' => '[^0-9.]+'
     ];
 
     /**
