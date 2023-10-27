@@ -47,6 +47,33 @@ public static accessible(mixed $value): bool
 
 ***
 
+### isAssoc
+
+Проверить является ли
+массив ассоциативным
+
+```php
+public static isAssoc(array $array): bool
+```
+
+
+
+* This method is **static**.
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$array` | **array** | Массив |
+
+
+
+
+***
+
 ### exists
 
 Проверить что ключ есть в массиве

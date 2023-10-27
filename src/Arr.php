@@ -46,6 +46,21 @@ class Arr
     }
 
     /**
+     * Проверить является ли
+     * массив ассоциативным
+     *
+     * @param array $array Массив
+     *
+     * @return bool
+     */
+    public static function isAssoc(array $array): bool
+    {
+        return array_keys(
+            $keys = array_keys($array)
+        ) !== $keys;
+    }
+
+    /**
      * Проверить что ключ есть в массиве
      *
      * @param string|int        $key   Ключ
