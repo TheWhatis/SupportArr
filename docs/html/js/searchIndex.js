@@ -21,6 +21,11 @@ Search.appendIndex(
             "summary": "\u041F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C\u0020\u0447\u0442\u043E\u0020\u043A\u043B\u044E\u0447\u0020\u0435\u0441\u0442\u044C\u0020\u0432\u0020\u043C\u0430\u0441\u0441\u0438\u0432\u0435",
             "url": "classes/Whatis-Support-Arr.html#method_exists"
         },                {
+            "fqsen": "\\Whatis\\Support\\Arr\u003A\u003AdotExists\u0028\u0029",
+            "name": "dotExists",
+            "summary": "\u041F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C\u0020\u0447\u0442\u043E\u0020\u0435\u0441\u0442\u044C\u0020\u043A\u043B\u044E\u0447\u0020\u0432\u0020\u043C\u0430\u0441\u0441\u0438\u0432\u0435\n\u0441\u0020\u043F\u043E\u043C\u043E\u0449\u044C\u044E\u0020dotted\u0020\u043F\u0443\u0442\u0438\u0020\u0028\u043A\u043B\u044E\u0447\u0430\u0029",
+            "url": "classes/Whatis-Support-Arr.html#method_dotExists"
+        },                {
             "fqsen": "\\Whatis\\Support\\Arr\u003A\u003Adot\u0028\u0029",
             "name": "dot",
             "summary": "\u0421\u043E\u0437\u0434\u0430\u0442\u044C\u0020dotted\u0020\u043C\u0430\u0441\u0441\u0438\u0432",

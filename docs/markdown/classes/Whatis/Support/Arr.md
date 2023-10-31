@@ -120,6 +120,34 @@ public static exists(string|int $key, array|\ArrayAccess $array): bool
 
 ***
 
+### dotExists
+
+Проверить что есть ключ в массиве
+с помощью dotted пути (ключа)
+
+```php
+public static dotExists(string|int $key, array $array): bool
+```
+
+
+
+* This method is **static**.
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$key` | **string&#124;int** | Ключ |
+| `$array` | **array** | Массив |
+
+
+
+
+***
+
 ### dot
 
 Создать dotted массив
@@ -310,4 +338,4 @@ public static getWithWildcards(array $array, string|int $key): array
 
 
 ***
-> Automatically generated from source code comments on 2023-10-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-10-31 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
