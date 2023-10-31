@@ -95,6 +95,22 @@ class Arr
     }
 
     /**
+     * Проверить что есть ключ в массиве
+     * с помощью dotted пути (ключа)
+     *
+     * @param string|int $key   Ключ
+     * @param array      $array Массив
+     *
+     * @return bool
+     */
+    public static function dotExists(
+        string|int $key,
+        array $array
+    ): bool {
+        return array_key_exists($key, static::extDot($array));
+    }
+
+    /**
      * Создать dotted массив
      *
      * Преобразовывает массив в
