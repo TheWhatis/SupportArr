@@ -8,7 +8,6 @@
 для работы с массивами
 
 PHP version 8
-
 * Full name: `\Whatis\Support\Arr`
 
 **See Also:**
@@ -30,7 +29,7 @@ public static array $wildcards
 ```
 
 Необходимо для метода
-{@see \Whatis\Support\Arr::getWithWildcards()}
+[\Whatis\Support\Arr::getWithWildcards()]()
 
 * This property is **static**.
 
@@ -194,7 +193,7 @@ public static extDot(iterable $iterable, string $prefix = &#039;&#039;): array
 ```
 
 Преобразовывает dotted массив
-как метод {@see \Whatis\Support\Arr::dot()},
+как метод [\Whatis\Support\Arr::dot()](),
 только оставляет промежуточные
 ключи и значения
 
@@ -224,7 +223,7 @@ public static undot(array $array): array
 ```
 
 Разворачивает dotted массив
-(см. метод {@see \Whatis\Support\Arr::dot()})
+(см. метод [\Whatis\Support\Arr::dot()]())
 
 * This method is **static**.
 
@@ -338,4 +337,4 @@ public static getWithWildcards(array $array, string|int $key): array
 
 
 ***
-> Automatically generated from source code comments on 2023-10-31 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated on 2023-11-16
