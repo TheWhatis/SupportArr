@@ -1,6 +1,6 @@
 # Классы-помощники для работы с массивами
 ## Документация
-  * [Documentation](https://github.com/TheWhatis/SupportArr/tree/master/docs/markdown/index.md "Documentation")
+  * [Documentation](https://github.com/TheWhatis/SupportArr/tree/master/docs/markdown/Home.md "Documentation")
 ## Установка
 ```
 composer require whatis/support-arr
