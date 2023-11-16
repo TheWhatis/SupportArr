@@ -12,6 +12,10 @@
         "array"
     ],
     "require": { "php": "^8.2" },
+    "require-dev": {
+        "php": "^8.2",
+        "whatis/phpdocumentor-markdown": "^0.1.7"
+    },
     "license": "unlicense",
     "autoload": {
         "psr-4": {
@@ -31,12 +35,8 @@
             "phpdoc -d src -t docs/html"
         ],
         "phpdoc-markdown": [
-            "phpdoc -d src -t docs/markdown --template=vendor/saggre/phpdocumentor-markdown/themes/markdown"
+            "phpdoc -d src -t docs/markdown --template=vendor/whatis/phpdocumentor-markdown/themes/markdown"
         ],
         "phpdoc": [ "@phpdoc-html", "@phpdoc-markdown" ]
-    },
-    "require-dev": {
-        "php": "^8.2",
-        "saggre/phpdocumentor-markdown": "^0.1.3"
     }
 }
