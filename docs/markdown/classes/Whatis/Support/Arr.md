@@ -271,6 +271,34 @@ public static set(array& $array, string|int $key, mixed $value): array
 
 ***
 
+### unset
+
+Удалить значение из массива по
+dotted ключу
+
+```php
+public static unset(array& $array, string|int $key): void
+```
+
+
+
+* This method is **static**.
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$array` | **array** | Ссылка на массив |
+| `$key` | **string&#124;int** | Ключ |
+
+
+
+
+***
+
 ### get
 
 Получить значение из массива
@@ -337,4 +365,4 @@ public static getWithWildcards(array $array, string|int $key): array
 
 
 ***
-> Automatically generated on 2023-11-16
+> Automatically generated on 2023-12-13
