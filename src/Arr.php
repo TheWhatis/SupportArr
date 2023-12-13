@@ -136,11 +136,11 @@ class Arr
         string $prefix = ''
     ): array {
         $result = [];
-        foreach($iterable as $key => $value) {
+        foreach ($iterable as $key => $value) {
             // Если массив то перебираем
             // внутренние элементы с
             // помощью static::dot
-            if(static::accessible($value)) {
+            if (static::accessible($value)) {
                 $result = array_merge(
                     $result, static::dot(
                         $value, $prefix . $key . '.'
@@ -178,14 +178,14 @@ class Arr
         string $prefix = ''
     ): array {
         $result = [];
-        foreach($iterable as $key => $value) {
+        foreach ($iterable as $key => $value) {
             // Добавляем значение в массив
             $result[$prefix . $key] = $value;
 
             // Если массив то перебираем
             // внутренние элементы с
             // помощью static::extDot
-            if(static::accessible($value)) {
+            if (static::accessible($value)) {
                 $result = array_merge(
                     $result, static::extDot(
                         $value, $prefix . $key . '.'
@@ -259,6 +259,38 @@ class Arr
     }
 
     /**
+     * Удалить значение из массива по
+     * dotted ключу
+     *
+     * @param array      $array Ссылка на массив
+     * @param string|int $key   Ключ
+     *
+     * @return void
+     */
+    public static function unset(
+        array &$array,
+        string|int $key
+    ): void {
+        foreach (($keys = explode('.', $key)) as $index => $key) {
+            // Если ключа не существует, то
+            // прекращаем работу
+            if (!isset($array[$key])) {
+                break;
+            }
+
+            // Если последний элемент, то
+            // устанавливем соответствующее
+            // значение в конец
+            if ($index === array_key_last($keys)) {
+                unset($array[$key]);
+                break;
+            }
+
+            $array = &$array[$key];
+        }
+    }
+
+    /**
      * Получить значение из массива
      * по ключу
      *
@@ -313,8 +345,8 @@ class Arr
      * Также можно экранировать
      * шаблоны: `path.to.\*.key`
      *
-     * @param array      $array   Массив
-     * @param string|int $key     Ключ
+     * @param array      $array Массив
+     * @param string|int $key   Ключ
      *
      * @return array
      */
